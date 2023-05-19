@@ -1,0 +1,11 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-start;
+    color: maroon
+  }
+
+
+.country-change {
+  word-spacing: normal;
+}
