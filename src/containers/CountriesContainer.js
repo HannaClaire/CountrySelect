@@ -28,16 +28,25 @@ const CountryContainer = () => {
         setSelectedCountry(country)
     }
 
+    // const addFavourites = (newCountry) => {
+    //     newCountry.id = Date.now()
+    //     const newCountries = [...countries, newCountries]
+    //     setCountries(newCountries)
+    // }
 
 
 
     return (
-//used to show the general layout on the browser page, whilst component returns present the actual content to be put on browser
+
+//used to show the general layout on the browser page, whilst component returns the actual content to be put on browser
+
         <div className="main-container">
         <label htmlFor='total-pop'></label>
             <WorldPopulation totalPop={totalPop} />
+            <br></br>
             <label htmlFor="Countries-dropdown"><b>Select Country:</b></label>
             <CountrySelect countries={countries} updateCountrySelected={updateCountrySelected} />
+        
             {selectedCountry ? <CountryDetail country={selectedCountry} /> : null}
             <label htmlFor='Fave-country'><b> Select Favourite Countries:</b> </label>
             <CountrySelect countries={countries} updateCountrySelected={updateCountrySelected} />
