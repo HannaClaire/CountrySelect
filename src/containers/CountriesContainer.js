@@ -3,10 +3,12 @@ import CountrySelect from '../components/CountrySelect';
 import './CountriesContainer.css';
 import CountryDetail from '../components/CountryDetail';
 import WorldPopulation from '../components/WorldPopulation';
+import FaveCountries from '../components/FaveCountries';
 
 const CountryContainer = () => {
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
+    const [favourites, setFavouriteCountry] = useState([])
 
     useEffect(() => {
     getCountries();
@@ -27,14 +29,21 @@ const CountryContainer = () => {
     }
 
 
-   
+
+
     return (
 //used to show the general layout on the browser page, whilst component returns present the actual content to be put on browser
         <div className="main-container">
+        <label htmlFor='total-pop'></label>
             <WorldPopulation totalPop={totalPop} />
-            <label htmlFor="Countries-dropdown">Select Country:</label>
+            <label htmlFor="Countries-dropdown"><b>Select Country:</b></label>
             <CountrySelect countries={countries} updateCountrySelected={updateCountrySelected} />
             {selectedCountry ? <CountryDetail country={selectedCountry} /> : null}
+            <label htmlFor='Fave-country'><b> Select Favourite Countries:</b> </label>
+            <CountrySelect countries={countries} updateCountrySelected={updateCountrySelected} />
+            {selectedCountry ? <CountryDetail country={selectedCountry} /> : null}
+            <br></br>
+            <label htmlFor='Favourites List'><b>Your Favourite Countries: </b></label>
         </div>
     )
 }

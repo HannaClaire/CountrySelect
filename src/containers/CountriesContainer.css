@@ -2,10 +2,16 @@
     display: grid;
     justify-content: space-between;
     justify-content: flex-start;
-    color: black
+    color: black;
+    background-color: beige;
+    
   }
 
 
 .country-change {
   word-spacing: normal;
+}
+body {
+
+  background-color: wheat;
 }
