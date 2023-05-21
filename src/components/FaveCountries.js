@@ -1,0 +1,11 @@
+const FaveCountries = ({countries}) => {
+
+
+
+
+    return (
+        <>
+            
+        </>
+    )
+}

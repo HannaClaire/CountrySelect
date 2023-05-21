@@ -1,8 +1,8 @@
 .main-container {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     justify-content: flex-start;
-    color: maroon
+    color: black
   }
 
 
